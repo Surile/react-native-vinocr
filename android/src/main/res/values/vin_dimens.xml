@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsizi">20dp</dimen>
+    <dimen name="camera_top_margin">40dp</dimen>
+    <dimen name="camera_rect_line_length">16dp</dimen>
+    <dimen name="camera_rect_lint_width">2dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="num">25dp</dimen>
+    <dimen name="img_lint_width">1.5dp</dimen>
+</resources>

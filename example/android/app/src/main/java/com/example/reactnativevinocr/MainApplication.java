@@ -11,7 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.reactnativevinocr.VinocrPackage;
+import com.vinocr.VinocrPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

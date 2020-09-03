@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_color"
+                tools:context="com.etop.activity.ScanVinActivity">
+
+    <RelativeLayout
+        android:id="@+id/etop_vin_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:id="@+id/aevs_vin_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include layout="@layout/vin_title_layout"/>
+
+        <com.etop.view.VinScanRectView
+            android:id="@+id/aevs_vsrv_rectview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/aevs_ivh_scanline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/vin_scan_line"
+            android:rotation="90"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/aevs_ivv_scanline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/vin_scan_line"/>
+
+        <LinearLayout
+            android:id="@+id/aevs_ll_flashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/aevs_iv_flashlight"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/vin_flash_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:text="手电筒"
+                android:textColor="#FFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aevs_tv_cue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/camera_cue_shape"
+            android:paddingLeft="18dp"
+            android:paddingTop="3dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="3dp"
+            android:text="将框对准VIN码"
+            android:textColor="#fff"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

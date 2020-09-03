@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/black_color">
+
+    <ImageButton
+        android:id="@+id/etop_title_ib_left"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imagebutton_bg_selector"
+        android:scaleType="centerInside"
+        android:padding="11dp"
+        android:src="@mipmap/vin_title_back" />
+
+    <TextView
+        android:id="@+id/etop_title_tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="XXX识别"
+        android:textColor="@color/white_color"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/etop_title_ib_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/imagebutton_bg_selector"
+        android:scaleType="centerInside"
+        android:padding="11dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/vin_shuping" />
+</RelativeLayout>

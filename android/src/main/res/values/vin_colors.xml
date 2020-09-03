@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_color">#000000</color>
+    <color name="button_pressed_bg">#AEAEAE</color>
+    <color name="green_color">#00CC00</color><!-- 绿色 -->
+    <color name="list_view_bg">#DAD9DE</color>
+    <color name="theme_color">#59D4D1</color>
+    <color name="white_color">#FFFFFF</color>
+</resources>

@@ -16,4 +16,8 @@ RCT_REMAP_METHOD(multiply,
   resolve(result);
 }
 
+RCT_EXPORT_METHOD(cameraRequest){
+
+}
+
 @end
