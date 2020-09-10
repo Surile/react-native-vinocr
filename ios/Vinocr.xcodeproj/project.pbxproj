@@ -8,22 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		5E555C0D2413F4C50049A1A2 /* Vinocr.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Vinocr.m */; };
+		860EEF99250A0EAA0064940F /* REImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF87250A0EA80064940F /* REImageHelper.m */; };
+		860EEF9A250A0EAA0064940F /* REEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF88250A0EA80064940F /* REEditController.m */; };
+		860EEF9B250A0EAA0064940F /* REVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF89250A0EA80064940F /* REVerticalButton.m */; };
+		860EEF9C250A0EAA0064940F /* VinSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF8F250A0EA90064940F /* VinSquareView.m */; };
+		860EEF9D250A0EAA0064940F /* VinCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF94250A0EA90064940F /* VinCameraController.m */; };
+		860EEF9E250A0EAA0064940F /* VinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF96250A0EA90064940F /* VinManager.m */; };
+		860EEF9F250A0EAA0064940F /* VinVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 860EEF97250A0EA90064940F /* VinVerticalButton.m */; };
+		860EEFA0250A0EAA0064940F /* libvinTyper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 860EEF98250A0EAA0064940F /* libvinTyper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		58B511D91A9E6C8500147676 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libVinocr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVinocr.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		860EEF85250A0EA80064940F /* VinImageResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VinImageResource.bundle; sourceTree = "<group>"; };
+		860EEF87250A0EA80064940F /* REImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REImageHelper.m; sourceTree = "<group>"; };
+		860EEF88250A0EA80064940F /* REEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REEditController.m; sourceTree = "<group>"; };
+		860EEF89250A0EA80064940F /* REVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVerticalButton.m; sourceTree = "<group>"; };
+		860EEF8A250A0EA80064940F /* REImageResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = REImageResource.bundle; sourceTree = "<group>"; };
+		860EEF8B250A0EA80064940F /* REImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REImageHelper.h; sourceTree = "<group>"; };
+		860EEF8C250A0EA80064940F /* REEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REEditController.h; sourceTree = "<group>"; };
+		860EEF8D250A0EA80064940F /* REVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVerticalButton.h; sourceTree = "<group>"; };
+		860EEF8E250A0EA90064940F /* vinTyper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vinTyper.h; sourceTree = "<group>"; };
+		860EEF8F250A0EA90064940F /* VinSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VinSquareView.m; sourceTree = "<group>"; };
+		860EEF90250A0EA90064940F /* VinCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VinCameraController.h; sourceTree = "<group>"; };
+		860EEF91250A0EA90064940F /* VinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VinManager.h; sourceTree = "<group>"; };
+		860EEF92250A0EA90064940F /* VinVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VinVerticalButton.h; sourceTree = "<group>"; };
+		860EEF93250A0EA90064940F /* VinNCResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VinNCResource.bundle; sourceTree = "<group>"; };
+		860EEF94250A0EA90064940F /* VinCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VinCameraController.m; sourceTree = "<group>"; };
+		860EEF95250A0EA90064940F /* VinSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VinSquareView.h; sourceTree = "<group>"; };
+		860EEF96250A0EA90064940F /* VinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VinManager.m; sourceTree = "<group>"; };
+		860EEF97250A0EA90064940F /* VinVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VinVerticalButton.m; sourceTree = "<group>"; };
+		860EEF98250A0EAA0064940F /* libvinTyper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvinTyper.a; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* Vinocr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vinocr.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Vinocr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vinocr.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860EEFA0250A0EAA0064940F /* libvinTyper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +82,34 @@
 				B3E7B5881CC2AC0600A0062D /* Vinocr.h */,
 				B3E7B5891CC2AC0600A0062D /* Vinocr.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				860EEF98250A0EAA0064940F /* libvinTyper.a */,
+				860EEF86250A0EA80064940F /* REEditHelper */,
+				860EEF90250A0EA90064940F /* VinCameraController.h */,
+				860EEF94250A0EA90064940F /* VinCameraController.m */,
+				860EEF85250A0EA80064940F /* VinImageResource.bundle */,
+				860EEF91250A0EA90064940F /* VinManager.h */,
+				860EEF96250A0EA90064940F /* VinManager.m */,
+				860EEF93250A0EA90064940F /* VinNCResource.bundle */,
+				860EEF95250A0EA90064940F /* VinSquareView.h */,
+				860EEF8F250A0EA90064940F /* VinSquareView.m */,
+				860EEF8E250A0EA90064940F /* vinTyper.h */,
+				860EEF92250A0EA90064940F /* VinVerticalButton.h */,
+				860EEF97250A0EA90064940F /* VinVerticalButton.m */,
 			);
+			sourceTree = "<group>";
+		};
+		860EEF86250A0EA80064940F /* REEditHelper */ = {
+			isa = PBXGroup;
+			children = (
+				860EEF87250A0EA80064940F /* REImageHelper.m */,
+				860EEF88250A0EA80064940F /* REEditController.m */,
+				860EEF89250A0EA80064940F /* REVerticalButton.m */,
+				860EEF8A250A0EA80064940F /* REImageResource.bundle */,
+				860EEF8B250A0EA80064940F /* REImageHelper.h */,
+				860EEF8C250A0EA80064940F /* REEditController.h */,
+				860EEF8D250A0EA80064940F /* REVerticalButton.h */,
+			);
+			path = REEditHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,7 +121,7 @@
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				58B511D91A9E6C8500147676 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -113,7 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860EEF9E250A0EAA0064940F /* VinManager.m in Sources */,
+				860EEF9F250A0EAA0064940F /* VinVerticalButton.m in Sources */,
+				860EEF99250A0EAA0064940F /* REImageHelper.m in Sources */,
 				5E555C0D2413F4C50049A1A2 /* Vinocr.m in Sources */,
+				860EEF9B250A0EAA0064940F /* REVerticalButton.m in Sources */,
+				860EEF9A250A0EAA0064940F /* REEditController.m in Sources */,
+				860EEF9D250A0EAA0064940F /* VinCameraController.m in Sources */,
+				860EEF9C250A0EAA0064940F /* VinSquareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,13 +279,17 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Vinocr;
 				SKIP_INSTALL = YES;
@@ -232,13 +299,17 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Vinocr;
 				SKIP_INSTALL = YES;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Button, Image } from 'react-native';
+import { StyleSheet, View, Text, Button, Image, Platform } from 'react-native';
 import Vinocr from 'react-native-vinocr';
 import ImagePicker, { ImagePickerOptions } from 'react-native-image-picker';
 
@@ -13,10 +13,21 @@ export default function App() {
    * urlResult 识别图片地址
    */
   const cameraVIN = () => {
-    Vinocr.cameraRequest((recogResult: number, urlResult: string) => {
-      setResult(recogResult);
-      setImgUrl(urlResult);
-    });
+    if (Platform.OS === 'android') {
+      Vinocr.cameraRequest((recogResult: number, urlResult: string) => {
+        setResult(recogResult);
+        setImgUrl(urlResult);
+      });
+    } else {
+      Vinocr.vinRecognizeFinish('9C15EEA95B60787AEEEA')
+        .then((result: any) => {
+          setResult(result.vinStr);
+          setImgUrl(result.areaVinImagePath);
+        })
+        .catch((err) => {
+          console.log('err', err);
+        });
+    }
   };
 
   /**
@@ -58,7 +69,6 @@ export default function App() {
     };
     ImagePicker.showImagePicker(options, (response) => {
       console.log('Response = ', response);
-
       if (response.didCancel) {
         console.log('User cancelled photo picker');
       } else if (response.error) {
