@@ -3,11 +3,12 @@
 #import "REEditController.h"
 #import "VinManager.h"
 
+
 //#define USEPUSH NO
 
 @interface Vinocr () <VinCameraDelegate, VinManagerDelegate>
 
-@property (nonatomic, strong) UINavigationController * navController;
+@property (nonatomic, weak) VinCameraController * cameraVC;
 
 @property (nonatomic, weak) REEditController * editVC;
 
@@ -126,4 +127,5 @@ RCT_EXPORT_METHOD(recogVinImage:(NSString *)authCode imageString:(NSString *)ima
 
 
 @end
+
 
