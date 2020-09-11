@@ -13,9 +13,11 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/Surile/react-native-vinocr.git", :tag => "#{s.version}" }
 
-  
+
   s.source_files = "ios/**/*.{h,m,mm}"
-  
+  s.vendored_libraries = "ios/*.a"
+  s.resources = "ios/**/*.{bundle}"
+
 
   s.dependency "React"
 end
