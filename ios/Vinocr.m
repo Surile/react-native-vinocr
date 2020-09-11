@@ -24,13 +24,15 @@
 RCT_EXPORT_MODULE(Vinocr);
 
 
+//MARK:视频流识别
 RCT_EXPORT_METHOD(vinRecognizeFinish:(NSString *)authCode resolver:(RCTPromiseResolveBlock)resolver rejecter:(RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *controller = (UIViewController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-        VinCameraController * mainController = [[VinCameraController alloc] initWithAuthorizationCode:authCode];
-        mainController.delegate = self;
-        mainController.getVinResultFromOCR = ^(NSDictionary *resultDic) {
-            [self.navController dismissViewControllerAnimated:YES completion:^{
+        VinCameraController * cameraVC = [[VinCameraController alloc] initWithAuthorizationCode:authCode];
+        cameraVC.delegate = self;
+        self.cameraVC = cameraVC;
+        cameraVC.getVinResultFromOCR = ^(NSDictionary *resultDic) {
+            [self.cameraVC dismissViewControllerAnimated:YES completion:^{
                 if (resultDic) {
                     resolver(resultDic);
                 } else {
@@ -41,12 +43,14 @@ RCT_EXPORT_METHOD(vinRecognizeFinish:(NSString *)authCode resolver:(RCTPromiseRe
         };
         
         
-        mainController.modalPresentationStyle = UIModalPresentationFullScreen;
+        cameraVC.modalPresentationStyle = UIModalPresentationFullScreen;
         
-        [controller presentViewController:mainController animated:YES completion:nil];
+        [controller presentViewController:cameraVC animated:YES completion:nil];
     });
 }
 
+
+//MARK:导入识别
 RCT_EXPORT_METHOD(recogVinImage:(NSString *)authCode imageString:(NSString *)imageString needEdit:(BOOL)needEdit resolver:(RCTPromiseResolveBlock)resolver rejecter:(RCTPromiseRejectBlock)reject) {
     self.resolverCallback = resolver;
     self.rejectCallback = reject;
@@ -66,6 +70,7 @@ RCT_EXPORT_METHOD(recogVinImage:(NSString *)authCode imageString:(NSString *)ima
             REEditController * editVC = [[REEditController alloc] initWithImage:image andTipString:@"请将车架号移至框内"];
             self.editVC = editVC;
             editVC.getCutImage = ^(UIImage * _Nonnull cutImage) {
+                //裁切结束
                 [self.editVC dismissViewControllerAnimated:YES completion:^{
                     [VinManager sharedVinManager].delegate = self;
                     [[VinManager sharedVinManager] recognizeVinCodeWithPhoto:cutImage andAuthCode:authCode];
@@ -114,7 +119,7 @@ RCT_EXPORT_METHOD(recogVinImage:(NSString *)authCode imageString:(NSString *)ima
 }
 
 - (void)backButtonClickWithVinCamera:(UIViewController *)cameraController {
-    [self.navController dismissViewControllerAnimated:YES completion:^{
+    [self.cameraVC dismissViewControllerAnimated:YES completion:^{
         
     }];
 }
