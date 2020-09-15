@@ -11,7 +11,7 @@ public class ConstantConfig {
 	/**
 	 * 授权文件的全名
 	 */
-	public static final String licenseId = "9C15EEA95B60787AEEEA.lic";
+	public static final String licenseId = "7BBC57530E74BBCB7532.lic";
 	/**
 	 * 核心文件
 	 */
